@@ -1,0 +1,92 @@
+!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>HTML + CSS</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="Website"> 
+      <h2 class="headline">CARLO's art stuff</h2>
+      <ul class="menu">
+        <li><a class="active" href="/index.html">Home</a></li>
+        <li><a href="/myart.html">My Art</a></li>
+        <li><a href="/art.html">Art</a></li>
+        <li><a href="/music.html">Music</a></li>
+      </ul>
+      <div class="BegrüßungundSocials">
+      <div class="Begrüßung">
+     <h3> Hello! </h3> My name is Shanna Carlotta (short = Carlo) and I am 20 years old! I am currently studying graphic design at the HSBI in Germany and love to be creative and make art. In my second semester I took a Web Development course, which was about learning how to code. At the end of the course we got the assignment to create our very own website. And that resulted what you can see here! On "Carlo's art stuff" you can find my art and some other cool stuff, so <b> have fun! </b>
+     <p> </p>
+     <img
+        class="flowers1"
+        src="flowerssss.png"
+        alt="ein Bild von Blumen"
+        height="100px" 
+        />
+      </div>
+      </p>
+      <div class="Socials">
+        <h4>Follow me on my socials!</h4>
+        <div><b>IG:</b> <a href="https://www.instagram.com/carlomalt/">carlomalt</a></div>
+        <div><b>TikTok:</b> <a href="https://www.tiktok.com/@carlomalt?_t=8oK6ro8RRw1&_r=1">carlomalt</a></div>
+        <img
+        src="Regenwurmi.png"
+        alt="ein Bild von einem Regenwurm"
+        height="120px" 
+        />
+        </div>
+      </div>
+      <hr class="farbige-linie">
+      <div class="Formular">
+        <h4>For questions, orders and suggestions, feel free to contact me!</h4>
+        <form id="contactForm">
+          <div>
+            <label for="firstName">First name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+          </div>
+          <div>
+            <p>
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+          </div>
+          <p>
+          <div>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="9" cols="30" required></textarea>
+          </div>
+            <p>
+            <button type="submit">Send</button>
+        </form>
+        <p id="resultMessage"></p>
+    </div>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var firstName = document.getElementById('firstName').value;
+            var lastName = document.getElementById('lastName').value;
+            var message = document.getElementById('message').value;
+
+            var mailtoLink = `mailto:shanna.horstmeier@gmail.com?subject=Kontakt%20von%20${encodeURIComponent(firstName)}%20${encodeURIComponent(lastName)}&body=${encodeURIComponent(message)}`;
+            window.location.href = mailtoLink;
+
+            document.getElementById('resultMessage').textContent = 'Your message has been sent successfully!';
+        });
+    </script>
+    <div class="robo">
+    <img
+    class="fit-picture"
+    src="Unbenanntes_Projekt 5 copy.png"
+    alt="ein Bild von einem kleinen Roboter"
+    height="200px" 
+    />
+    </div>
+      </div>
+    </div>
+    </div>
+  </body>
+</html>
+
